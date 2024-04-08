@@ -1,0 +1,54 @@
+/* Voeg deze CSS toe aan je bestaande CSS-bestand of gebruik een apart CSS-bestand en koppel het aan je HTML-pagina */
+
+/* Kaartlay-out */
+.card {
+    flex: 1;
+  }
+  
+  /* Responsive kaarten (1 / 2 / 3 cols) */
+  @media (min-width: 576px) {
+    .flex-sm-cols-2 > * {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .flex-md-cols-3 > * {
+      flex: 0 0 33.333333%;
+      max-width: 33.333333%;
+    }
+  }
+  
+  /* Kaartfooter */
+  .card-footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+  }
+  
+  /* CSS flex-eigenschappen voor gelijke hoogtes */
+  .flex {
+    display: flex;
+  }
+  
+  .flex-1 {
+    flex: 1;
+  }
+  
+  .flex-col {
+    flex-direction: column;
+  }
+  
+  .flex-wrap {
+    flex-wrap: wrap;
+  }
+  
+  .flex-initial {
+    flex: initial;
+  }
+  
+  /* Extra marge voor afbeelding binnen kaart */
+  .card .bg-cover {
+    margin-bottom: -1.25rem; /* Neem de negatieve waarde van de kaart-padding (1.25rem) om het te compenseren */
+  }
+  
