@@ -5,11 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    #map {
+      height: 400px;
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-      <a class="navbar-brand" href="#">Mijn Website</a>
+      <a class="navbar-brand" href="#"><img src="Assets/logo.png" alt="Mijn Website" style="width: 100px; height: auto;"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -38,62 +44,70 @@
       </div>
     </div>
   </nav>
-  <header class="jumbotron">
+  <header class="jumbotron text-center">
     <div class="container">
       <h1>Contacteer ons</h1>
     </div>
   </header>
   <main class="container">
     <section class="my-5">
-      <!-- <h2>Contactformulier</h2> --> 
-      <form action="submit.php" method="post">
-        <div class="form-group">
-          <label for="user-type">Kies een contactpersoon:</label>
-          <select id="user-type" name="user-type" class="form-control" required>
-            <option value="">Selecteer</option>
-            <option value="admin">Admin</option>
-            <option value="webdesigner">Webdesigner</option>
-          </select>
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Adres</h2>
+          <address>
+            <strong>AP Hogeschool</strong><br>
+            Ellermanstraat, 33<br>
+            2060, Antwerpen
+        </address>
         </div>
-        <div class="form-group">
-          <label for="full-name">Full Name:</label>
-          <input type="text" id="full-name" name="full-name" class="form-control" required>
-          <div class="row">
-            <div class="col">
-              <label for="first-name">First Name:</label>
-              <input type="text" id="first-name" name="first-name" class="form-control">
-            </div>
-            <div class="col">
-              <label for="last-name">Last Name:</label>
-              <input type="text" id="last-name" name="last-name" class="form-control">
-            </div>
-          </div>
+        <div class="col-md-6">
+          <h2>Contactformulier</h2>
+          <form action="submit.php" method="post">
+            <label for="user-type">Kies een contactpersoon:</label>
+            <select id="user-type" name="user-type" class="form-control" required>
+              <option value="">Selecteer</option>
+              <option value="admin">Admin</option>
+              <option value="webdesigner">Webdesigner</option>
+            </select>
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" name="full-name" class="form-control" required>
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name" class="form-control">
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name" class="form-control">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="example@example.com" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+            <button type="submit" class="btn btn-primary">Verstuur</button>
+          </form>
         </div>
-        <div class="form-group">
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" class="form-control" placeholder="example@example.com" required>
-        </div>
-        <div class="form-group">
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Verstuur</button>
-      </form>
+      </div>
     </section>
     <section class="my-5">
-      <h2>Locatie</h2>
-      <!-- Kaart met markering -->
-      <div id="map"></div>
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Locatie</h2>
+          <div id="map"></div>
+        </div>
+        <div class="col-md-6">
+          <!-- Plaats hier eventuele informatie over de locatie -->
+        </div>
+      </div>
     </section>
   </main>
   <footer class="text-center py-4">
     <div class="container">
-      <p>&copy; 2024 Mijn Website</p>
+      <p>&copy; 2024 Wivalo</p>
     </div>
   </footer>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Voeg hier je kaartscript toe -->
+  <script>
+    // Voeg hier je JavaScript toe voor de kaart, bijvoorbeeld met behulp van Google Maps API
+  </script>
 </body>
-</html> 
+</html>
