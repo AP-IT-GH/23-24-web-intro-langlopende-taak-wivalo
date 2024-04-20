@@ -18,17 +18,17 @@
           <li class="nav-item">
             <a class="nav-link" href="index.html">Home</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Diensten
+          <li class="nav-item dropdown" onmouseover="showDropdownMenu()" onmouseout="hideDropdownMenu()">
+            <a id="dienstenLink" class="nav-link" href="Diensten.html">
+                Diensten <i class="bi bi-caret-down"></i>
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="Netwerkmonitoring.html">Netwerkmonitoring</a>
-              <a class="dropdown-item" href="DNS.html">DNS</a>
-              <a class="dropdown-item" href="SNMPMonitoring.html">SNMP Monitoring</a>
-              <a class="dropdown-item" href="VeeamBackup.html">Veeam Backup</a>
-              <a class="dropdown-item" href="Cybersecurity.html">Cybersecurity</a>
-              <a class="dropdown-item" href="Uptime.html">Uptime</a>
+            <div id="dienstenDropdownMenu" class="dropdown-menu" aria-labelledby="dienstenLink">
+                <a class="dropdown-item" href="Netwerkmonitoring.html">Netwerkmonitoring</a>
+                <a class="dropdown-item" href="DNS.html">DNS</a>
+                <a class="dropdown-item" href="SNMPMonitoring.html">SNMP Monitoring</a>
+                <a class="dropdown-item" href="VeeamBackup.html">Veeam Backup</a>
+                <a class="dropdown-item" href="Cybersecurity.html">Cybersecurity</a>
+                <a class="dropdown-item" href="Uptime.html">Uptime</a>
             </div>
           </li>
           <li class="nav-item">
@@ -67,6 +67,17 @@
       <p>&copy; 2024 Wivalo</p>
     </div>
   </footer>
+  <script>
+    function showDropdownMenu() {
+        var dropdownMenu = document.getElementById("dienstenDropdownMenu");
+        dropdownMenu.classList.add("show");
+    }
+
+    function hideDropdownMenu() {
+        var dropdownMenu = document.getElementById("dienstenDropdownMenu");
+        dropdownMenu.classList.remove("show");
+    }
+</script>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
