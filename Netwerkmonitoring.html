@@ -60,8 +60,7 @@
 
   <main class="container">
 
-    <h1>Grafana Dashboard Embed</h1>
-    <div id="dashboardContainer"></div>
+
 
     <section class="my-5">
       <h2>Ondertitel</h2>
@@ -126,22 +125,7 @@
     }
 
 
-        // Function to embed the dashboard in the webpage
-        async function embedDashboard() {
-            try {
-                const embedUrl = await fetchEmbedUrl();
 
-                // Embed the dashboard in the 'dashboardContainer' div
-                const dashboardContainer = document.getElementById('dashboardContainer');
-                dashboardContainer.innerHTML = `<iframe src="${embedUrl}" width="800" height="600" frameborder="0"></iframe>`;
-            } catch (error) {
-                // Handle error
-                console.error('Error embedding dashboard:', error);
-            }
-        }
-
-        // Call the embedDashboard function when the page loads
-        embedDashboard();
     </script>
 <!-- JavaScript en jQuery voor Bootstrap functionaliteit -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
