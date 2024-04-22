@@ -8,37 +8,49 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-      <a class="navbar-brand" href="#"><img src="Assets/logo.png" alt="Mijn Website" style="width: 100px; height: auto;"></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <!-- Navbar Brand with Logo -->
+    <a class="navbar-brand" href="#"><img src="Assets/logo.png" alt="Mijn Website" style="width: 100px; height: auto;"></a>
+    <!-- Navbar Toggler Button for Responsive Navigation -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Navbar Links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <!-- Home Link -->
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <!-- Diensten Link -->
+        <li class="nav-item">
+            <a class="nav-link" href="Diensten.html">Diensten</a>
           </li>
-          <li class="nav-item dropdown" onmouseover="showDropdownMenu()" onmouseout="hideDropdownMenu()">
-            <a id="dienstenLink" class="nav-link" href="Diensten.html">
-                Diensten <i class="bi bi-caret-down"></i>
-            </a>
-            <div id="dienstenDropdownMenu" class="dropdown-menu" aria-labelledby="dienstenLink">
-                <a class="dropdown-item" href="Netwerkmonitoring.html">Netwerkmonitoring</a>
-                <a class="dropdown-item" href="DNS.html">DNS</a>
-                <a class="dropdown-item" href="SNMPMonitoring.html">SNMP Monitoring</a>
-                <a class="dropdown-item" href="VeeamBackup.html">Veeam Backup</a>
-                <a class="dropdown-item" href="Cybersecurity.html">Cybersecurity</a>
-                <a class="dropdown-item" href="Uptime.html">Uptime</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
-        </ul>
-      </div>
+        <!-- Dashboards Link -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dashboardsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dashboards
+          </a>
+          <div class="dropdown-menu" aria-labelledby="dashboardsDropdown">
+            <!-- Dropdown Items van dashboards -->
+            <a class="dropdown-item" href="Netwerkmonitoring.html">Netwerkmonitoring</a>
+            <a class="dropdown-item" href="DNS.html">DNS</a>
+            <a class="dropdown-item" href="SNMPMonitoring.html">SNMP Monitoring</a>
+            <a class="dropdown-item" href="VeeamBackup.html">Veeam Backup</a>
+            <a class="dropdown-item" href="Cybersecurity.html">Cybersecurity</a>
+            <a class="dropdown-item" href="Uptime.html">Uptime</a>
+          </div>
+        </li>
+        <!-- Contact Link -->
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
 
   <header class="jumbotron">
     <div class="container">
@@ -47,6 +59,10 @@
   </header>
 
   <main class="container">
+
+    <h1>Grafana Dashboard Embed</h1>
+    <div id="dashboardContainer"></div>
+
     <section class="my-5">
       <h2>Ondertitel</h2>
       <p>Lange uitleg over Topic Pagina 1.</p>
@@ -108,7 +124,25 @@
         var dropdownMenu = document.getElementById("dienstenDropdownMenu");
         dropdownMenu.classList.remove("show");
     }
-  </script>
+
+
+        // Function to embed the dashboard in the webpage
+        async function embedDashboard() {
+            try {
+                const embedUrl = await fetchEmbedUrl();
+
+                // Embed the dashboard in the 'dashboardContainer' div
+                const dashboardContainer = document.getElementById('dashboardContainer');
+                dashboardContainer.innerHTML = `<iframe src="${embedUrl}" width="800" height="600" frameborder="0"></iframe>`;
+            } catch (error) {
+                // Handle error
+                console.error('Error embedding dashboard:', error);
+            }
+        }
+
+        // Call the embedDashboard function when the page loads
+        embedDashboard();
+    </script>
 <!-- JavaScript en jQuery voor Bootstrap functionaliteit -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
