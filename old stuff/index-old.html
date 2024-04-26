@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Custom Styles -->
+  <style>
+    body {
+      /* Set body background to white */
+      background-color: white;
+      /* Set text color to black */
+      color: black;
+    }
+
+    .navbar {
+      /* White background for navbar with 30% opacity */
+      background-color: rgba(255, 255, 255, 0.3);
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+    }
+
+    .navbar-brand img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .jumbotron {
+      /* Add background image */
+      background-image: url('Assets/Background.png');
+      /* Set background size to cover entire jumbotron */
+      background-size: cover;
+      /* Center the background image */
+      background-position: center;
+      /* White text color for title */
+      color: white;
+      /* Padding for the jumbotron */
+      padding: 40px 20px;
+      /* Border radius for the jumbotron */
+      border-radius: 10px;
+      /* Margin bottom for spacing */
+      margin-bottom: 30px;
+    }
+
+    .jumbotron h1 {
+      /* Margin bottom for spacing */
+      margin-bottom: 0;
+    }
+
+    .content-section {
+      /* White background for content sections */
+      background-color: rgba(255, 255, 255, 0.8);
+      /* Padding for the content sections */
+      padding: 20px;
+      /* Border radius for the content sections */
+      border-radius: 10px;
+      /* Margin bottom for spacing */
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <!-- Navbar Brand with Logo -->
+    <a class="navbar-brand" href="#"><img src="Assets/logo.png" alt="Mijn Website" style="width: 100px; height: auto;"></a>
+    <!-- Navbar Toggler Button for Responsive Navigation -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Navbar Links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <!-- Home Link -->
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <!-- Diensten Link -->
+        <li class="nav-item">
+            <a class="nav-link" href="Diensten.html">Diensten</a>
+          </li>
+        <!-- Dashboards Link -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dashboardsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dashboards
+          </a>
+          <div class="dropdown-menu" aria-labelledby="dashboardsDropdown">
+            <!-- Dropdown Items van dashboards -->
+            <a class="dropdown-item" href="Netwerkmonitoring.html">Netwerkmonitoring</a>
+            <a class="dropdown-item" href="DNS.html">DNS</a>
+            <a class="dropdown-item" href="SNMPMonitoring.html">SNMP Monitoring</a>
+            <a class="dropdown-item" href="VeeamBackup.html">Veeam Backup</a>
+            <a class="dropdown-item" href="Cybersecurity.html">Cybersecurity</a>
+            <a class="dropdown-item" href="Uptime.html">Uptime</a>
+          </div>
+        </li>
+        <!-- Contact Link -->
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <!-- Jumbotron Header -->
+  <header class="jumbotron">
+    <div class="container">
+      <h1>No nonsense IT-Monitoring</h1>
+    </div>
+  </header>
+  
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Over Mij Section -->
+    <section class="my-5 content-section">
+      <h2>Over mezelf</h2>
+      <p>Mijn naam is Wietse. Als system en netwerk engineer werk ik dagelijks aan het ontwerpen, implementeren en onderhouden van complexe IT-infrastructuren. Mijn interesse in deze wereld heeft me ertoe aangezet om ook naast mijn werk mijn kennis verder uit te breiden.
+        Op dit moment ben ik bezig met een avondschool opleiding waarbij ik een website moet ontwikkelen als onderdeel van mijn curriculum. Het is een uitdaging, omdat het me de mogelijkheid biedt om een nieuwe technische vaardigheid te ontdekken.
+        De website die ik aan het ontwikkelen ben zal zich richten op het onderwerp netwerkmonitoring. Het is een geweldige kans om mijn passie voor technologie te delen en anderen te informeren over dit onderwerp.
+        Ik kijk ernaar uit om mijn project af te ronden en mijn kennis verder te verdiepen.</p>
+      <!-- Mijn Foto Image with Caption -->
+      <figure>
+        <img src="Assets/mijn-foto.jpg" alt="Mijn Foto" class="img-fluid rounded-circle" width="200">
+        
+      </figure>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center py-4">
+    <div class="container">
+      <p>&copy; 2024 Wivalo</p>
+    </div>
+  </footer>
+  
+  <!-- JavaScript en jQuery voor Bootstrap functionaliteit -->
+  <script>
+    // Function to show dropdown menu
+    function showDropdownMenu() {
+        var dropdownMenu = document.getElementById("dienstenDropdownMenu");
+        dropdownMenu.classList.add("show");
+    }
+
+    // Function to hide dropdown menu
+    function hideDropdownMenu() {
+        var dropdownMenu = document.getElementById("dienstenDropdownMenu");
+        dropdownMenu.classList.remove("show");
+    }
+  </script>
+  <!-- Bootstrap JS and Dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

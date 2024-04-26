@@ -11,7 +11,7 @@ body {
 }
 
 .jumbotron {
-  background-image: url('../Assets/Background.png');
+  /* background-image: url('../Assets/Background.png'); */
   background-size: cover;
   background-position: center;
   color: white;
