@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>InfluxDB Data</title>
+</head>
+<body>
+
+<h1>InfluxDB Data</h1>
+
+<div id="data"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+axios.get('http://10.0.1.13:8086/query', {
+    params: {
+        q: 'SELECT * FROM "measurement_name"',
+        db: 'unifi'
+    }
+})
+.then(response => {
+    console.log('InfluxDB API Response:', response.data);
+    // Parse and process the data as needed...
+})
+.catch(error => {
+    console.error('Error retrieving data from InfluxDB:', error);
+    // Handle errors...
+});
+
+</script>
+
+</body>
+</html>
