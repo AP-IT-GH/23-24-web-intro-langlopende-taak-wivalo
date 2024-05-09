@@ -1,0 +1,5 @@
+.online { color: green; }
+.offline { color: red; }
+.monitor { margin-bottom: 20px; }
+.monitor-0 { background-color: #f0f0f0; padding: 20px; border-radius: 10px; }
+canvas { max-width: 100%; }
