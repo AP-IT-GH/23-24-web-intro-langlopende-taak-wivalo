@@ -9,7 +9,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 // geografische grenzen
-let bounds = [[51.16124101202631, 4.208989874406076], [51.16128811069127, 4.209193722278813]];
+let bounds = [[51.23041, 4.4155], [51.22991, 4.41675]];
 
 
 // Kleur grens
