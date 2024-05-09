@@ -8,6 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom Styles -->
   <link rel="stylesheet" href="/css/opmaak.css">
+  <link rel="stylesheet" href="/css/semantischetabel.css">
 
 </head>
 <body>
@@ -63,52 +64,64 @@
 
   <main class="container">
 
+  
 
-
-    <section class="my-5">
-      <h2>Ondertitel</h2>
-      <p>Lange uitleg over Topic Pagina 1.</p>
-      
-      <h3>Belangrijkste kenmerken:</h3>
+      <h1>SNMP (Simple Network Management Protocol) Monitoring</h1>
+      <p>SNMP Monitoring is een cruciaal aspect van netwerkbeheer in moderne IT-infrastructuur. Het is een gestandaardiseerd protocol dat wordt gebruikt om apparaten op IP-netwerken te monitoren en beheren, zoals routers, switches, servers, printers, en meer. SNMP stelt netwerkbeheerders in staat om informatie over deze apparaten te verzamelen, hun prestaties te monitoren, problemen te detecteren, en ze zelfs op afstand te beheren.</p>
+  
+      <h2>Componenten van SNMP Monitoring:</h2>
       <ul>
-        <li>Kenmerk 1</li>
-        <li>Kenmerk 2</li>
-        <li>Kenmerk 3</li>
+          <li><strong>Beheerde Apparaten:</strong> Dit zijn de apparaten die worden gemonitord, zoals routers, switches, servers, printers, etc. Deze apparaten bevatten SNMP-agenten, softwaremodules die verantwoordelijk zijn voor het verzamelen en rapporteren van gegevens.</li>
+          <li><strong>SNMP Manager:</strong> De SNMP-manager is het systeem dat verantwoordelijk is voor het verzamelen en verwerken van informatie van beheerde apparaten. Het communiceert met SNMP-agenten om gegevens te verzamelen en analyseert en presenteert deze informatie vervolgens aan netwerkbeheerders.</li>
+          <li><strong>SNMP Agenten:</strong> Dit zijn softwaremodules die zich bevinden op beheerde apparaten. SNMP-agenten verzamelen verschillende soorten gegevens over de status, prestaties en configuratie van het apparaat en stellen deze beschikbaar aan de SNMP-manager op verzoek.</li>
+          <li><strong>Management Information Base (MIB):</strong> MIB is een database die de structuur van de gegevens definieert die kunnen worden opgehaald uit SNMP-agenten. Het bevat een hiërarchische lijst van beheerde objecten, elk geïdentificeerd door een Object Identifier (OID).</li>
       </ul>
-      
-      <figure>
-        <img src="afbeelding1.jpg" alt="Afbeelding" class="img-fluid">
-        <figcaption>Beschrijving van de afbeelding.</figcaption>
+  
+      <h2>Hoe SNMP Werkt:</h2>
+      <ul>
+          <li><strong>Polling:</strong> De SNMP-manager stuurt periodiek verzoeken, bekend als SNMP Get-Requests, naar de SNMP-agenten op beheerde apparaten. Deze verzoeken vragen om specifieke gegevens, geïdentificeerd door hun OID.</li>
+          <li><strong>Trap:</strong> SNMP-agenten kunnen ook ongevraagde berichten genaamd SNMP-traps naar de SNMP-manager sturen. Traps worden geactiveerd door vooraf gedefinieerde gebeurtenissen, zoals systeemherstarts, wijzigingen in de interface-status of kritieke fouten. Deze proactieve melding maakt onmiddellijke reactie op kritieke problemen mogelijk.</li>
+          <li><strong>Management Information Base (MIB):</strong> Wanneer de SNMP-manager gegevens van een beheerd apparaat opvraagt, verwijst het naar de MIB om de structuur en betekenis van de gegevens te begrijpen. De MIB organiseert gegevens in een boomstructuur, waarbij elke OID een uniek gegevenspunt vertegenwoordigt.</li>
+      </ul>
+  
+      <h2>Voordelen van SNMP Monitoring:</h2>
+      <table>
+          <tr>
+              <th>Voordelen</th>
+              <th>Omschrijving</th>
+          </tr>
+          <tr>
+              <td>Real-time Monitoring</td>
+              <td>SNMP maakt real-time monitoring van netwerkapparaten mogelijk, met direct inzicht in de status van apparaten, prestatie-indicatoren en mogelijke problemen.</td>
+          </tr>
+          <tr>
+              <td>Proactieve Probleemdetectie</td>
+              <td>SNMP-traps maken proactieve detectie van netwerkproblemen mogelijk, waardoor beheerders problemen kunnen aanpakken voordat ze de prestaties of beschikbaarheid van het netwerk beïnvloeden.</td>
+          </tr>
+          <tr>
+              <td>Gecentraliseerd Beheer</td>
+              <td>SNMP vergemakkelijkt het gecentraliseerde beheer van diverse netwerkapparaten vanuit één SNMP-manager, waardoor netwerkbeheertaken worden gestroomlijnd.</td>
+          </tr>
+          <tr>
+              <td>Prestatie-optimalisatie</td>
+              <td>Door belangrijke prestatie-indicatoren te monitoren, zoals bandbreedtegebruik, CPU-gebruik en geheugengebruik, helpt SNMP bij het optimaliseren van de netwerkprestaties en resource-toewijzing.</td>
+          </tr>
+          <tr>
+              <td>Historische Gegevensanalyse</td>
+              <td>SNMP-gegevens kunnen in de loop van de tijd worden gelogd en geanalyseerd om trends, patronen en afwijkingen te identificeren, wat capaciteitsplanning en prestatie-optimalisatie vergemakkelijkt.</td>
+          </tr>
+          <tr>
+              <td>Automatisering en Beheer</td>
+              <td>SNMP kan worden gebruikt voor op afstand configureren en beheren van apparaten, waardoor beheerders taken zoals apparaat-herstarts, firmware-updates en configuratiewijzigingen op afstand kunnen uitvoeren.</td>
+          </tr>
+      </table>
+      <figure class="text-center">
+        <img src="./Assets/snmpapi.png" alt="voorbeeld SNMP api" class="img-fluid">
+        <figcaption>een voorbeeld van een api call naar een prtg server</figcaption>
       </figure>
     </section>
-
-    <!-- Kaart met markering -->
-    <div id="map1"></div>
-
-    <!-- Semantische tabel met bijschrift -->
-    <table class="table">
-      <caption>Beschrijving van de semantische tabel.</caption>
-      <thead>
-        <tr>
-          <th>Header 1</th>
-          <th>Header 2</th>
-          <th>Header 3</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Data 1</td>
-          <td>Data 2</td>
-          <td>Data 3</td>
-        </tr>
-        <tr>
-          <td>Data 4</td>
-          <td>Data 5</td>
-          <td>Data 6</td>
-        </tr>
-      </tbody>
-    </table>
   </main>
+    </main>
 
   <footer class="text-center py-4">
     <div class="container">
